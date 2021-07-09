@@ -35,8 +35,7 @@ a {
 .top-section_left {
     height: 100%;
     overflow: hidden;
-    width: 840px;
-    max-width: 70%;
+    
     nav {
         
         .logo {
@@ -170,7 +169,7 @@ a {
 
 /* Media queries */
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 429px) {
     body {
         height: 100vh;
     }
@@ -189,9 +188,13 @@ a {
             display: none;
         }
     }
+    .top-section_left {
+        width: 840px;
+        max-width: 70%;
+    }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 428px) {
     
     .slider {
         display: none;
@@ -208,10 +211,7 @@ a {
         height: 100%;
     }
     .top-section_left {
-        width: initial;
-        max-width: initial;
-        overflow: initial;
-        height: 100%;
+        margin-top: -6rem;
     }
     .top-section_right {
         width: initial;
@@ -231,6 +231,7 @@ a {
         position: initial;
         color: $black;
         padding: 2.5rem 0;
+        margin-top: -96px;
         display: flex;
         justify-content: center;
         .close {
@@ -243,7 +244,7 @@ a {
         }
     }
     .show {
-        transform:translateY(0)
+        transform:translateY(96px);
     }
     .hamburger {
         display: block;
