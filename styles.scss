@@ -32,59 +32,7 @@ a {
     height: 66%;
 }
 
-.top-section_left {
-    height: 100%;
-    overflow: hidden;
-    
-    nav {
-        
-        .logo {
-            object-fit:scale-down;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            font-size: 0.8rem;
-            li {
-                position: relative;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    bottom: -5px;
-                    width: 100%;
-                    transform: scale(0);
-                    transition: 0.2s linear;
-                    height: 2px;
-                    background-color: $white;
-                }
-                &:hover {
-                    &::before {
-                        transform:scale(0.9)
-                    }
-                }
 
-            }
-        }
-    }
-    .slider, .slider-mobile {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        z-index: -1;
-        transition: transform 0.4s linear;
-        img {
-            min-width: 100%;
-            object-fit:cover;
-        }
-        
-    }
-    
-    
-    .slider-mobile {
-        display: none;
-    }
-}
 
 .top-section_right {
     padding: 4rem;
@@ -169,10 +117,66 @@ a {
 
 /* Media queries */
 
-@media only screen and (min-width: 429px) {
+@media only screen and (min-width: 629px) {
     body {
         height: 100vh;
     }
+
+    .top-section_left {
+        height: 100%;
+        overflow: hidden;
+        
+        nav {
+            
+            .logo {
+                object-fit:scale-down;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 2rem;
+                font-size: 0.8rem;
+                li {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        width: 100%;
+                        transform: scale(0);
+                        transition: 0.2s linear;
+                        height: 2px;
+                        background-color: $white;
+                    }
+                    &:hover {
+                        &::before {
+                            transform:scale(0.9)
+                        }
+                    }
+    
+                }
+            }
+        }
+        .slider {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            z-index: -1;
+            transition: transform 0.4s linear;
+            img {
+                min-width: 100%;
+                object-fit:cover;
+            }
+            
+        }
+        
+        
+        .slider-mobile {
+            display: none;
+        }
+    }
+
+
     .hamburger {
         display: none;
     }
@@ -194,13 +198,22 @@ a {
     }
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 628px) {
     
     .slider {
         display: none;
     }
     .slider-mobile {
         display: flex;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        z-index: -1;
+        transition: transform 0.4s linear;
+        img {
+            min-width: 100%;
+            object-fit:cover;
+        }
     }
     section {
         flex-direction: column;
@@ -225,15 +238,22 @@ a {
     }
     nav {
         background-color: #fff;
+        z-index: 3;
         transform: translateY(-100%);
         transition: 0.2s ease-in;  
         width: 100%;
         position: initial;
         color: $black;
         padding: 2.5rem 0;
-        margin-top: -96px;
+       // margin-top: -96px;
         display: flex;
         justify-content: center;
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+        }
         .close {
             transform: translateY(0);
             display: block;
@@ -254,5 +274,6 @@ a {
         cursor: pointer;
         z-index: 3;
     }
+  
     
 }

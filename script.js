@@ -56,6 +56,7 @@ const changeSlide = () => {
         activeSlide = sliderPages.length-1
     }
     sliderDesktopCtn.style.transform = `translateX(-${activeSlide}00%)`
+    sliderMobileCtn.style.transform = `translateX(-${activeSlide}00%)`
 }
 
 const changeTxt = (idx) => {
@@ -78,11 +79,14 @@ btnRight.addEventListener('click', () => {
 
 hamburger.addEventListener('click', () => {
     nav.classList.add('show')
+    if (nav.classList.contains('closed-nav')) {
+        nav.classList.remove('closed-nav')
+    }
 })
 
 close.addEventListener('click', () => {
     nav.classList.remove('show')
-    console.log("cloooosoe")
+    nav.classList.add('closed-nav')
 })
 
 
