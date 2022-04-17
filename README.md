@@ -16,7 +16,7 @@ Users should be able to:
 ## Made with
 
 - HTML, CSS 
-- [Sass]https://sass-lang.com/
+- [Sass](https://sass-lang.com/)
 - Vanilla Javascript
 
 ## Link 
